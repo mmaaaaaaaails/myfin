@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myFin</title>
+    <link type="image/x-icon" href="./favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_block">
+            <div>
+                <h1 class="header_title">Облигации в России</h1>
+                <p class="header_subtitle">Облигации федерального, субфедерального займа, еврооблигации и облигации самых известных компаний России. Изучайте стоимость облигаций и ее изменение, доходность, купонные выплаты и многие другие показатели. Чтобы узнать больше про облигации и инвестирование в ценные бумаги, посетите наш <a class="header_subtitle-link" href="#">образовательный раздел</a> с множеством полезной информации.</p>
+            </div>
+            <img class="header_image" src="./assets/images/header/graph.svg" alt="graph">
+        </div>
+        <div class="header_subtitle-full">
+            <a href="#">Показать весь</a><span class="header_subtitle-arrow">></span>
+        </div>
+        <div class="header_box">
+            <label for="search"></label>
+            <input class="header_input" id="search" type="text" name="search" placeholder="Название или тикер">
+            <img class="header_input-search" src="assets/images/header/search.svg" loading="lazy" alt="search">
+            <img class="header_input-cross" src="assets/images/header/cross.png" loading="lazy" alt="cross">
+            <img class="header_input-disabled" src="assets/images/header/disable.svg" loading="lazy" alt="disabled">
+        </div>
+    </header>
+    <div class="line"></div>
+    <main class="main">
+        <section class="investments">
+            <h3 class="investments_title">Все об инвестициях</h3>
+            <div class="investments_block investments_block-one">
+                <div class="section_block">
+                    <h4 class="section_block-title">Акции</h4>
+                    <p class="investments_block-subtitle">Покупка акций российских и мировых компаний</p>
+                    <button class="investments_block-btn">Купить</button>
+                    <img class="investments_block-image" src="./assets/images/investments/google.png" loading="lazy" alt="google">
+                </div>
+                <div class="section_block">
+                    <h4 class="section_block-title">Облигации</h4>
+                    <p class="investments_block-subtitle">Инвестируйте в ценные бумаги и зарабатывайте на процентах</p>
+                    <button class="investments_block-btn">Подобрать </button>
+                </div>
+            </div>
+            <div class="investments_block investments_block-two">
+                <div class="section_block">
+                    <h4 class="section_block-title">Дивиденды</h4>
+                    <p class="investments_block-subtitle">Размеры дивидендов и даты выплат на календаре</p>
+                    <button class="investments_block-btn btn_empty">Подробнее</button>
+                </div>
+                <div class="section_block">
+                    <h4 class="section_block-title">Индивидуальный инвестиционный счет</h4>
+                    <p class="investments_block-subtitle">Откройте счет и увеличивайте доходность своих инвестиций</p>
+                    <button class="investments_block-btn">Открыть ИИС</button>
+                    <img class="investments_block-image" src="./assets/images/investments/bill.png" loading="lazy" alt="bill">
+                </div>
+            </div>
+            <div class="investments_block investments_block-three">
+                <div class="section_block">
+                    <h4 class="section_block-title">Брокеры</h4>
+                    <p class="investments_block-subtitle">Инвестируйте вместе с профессионалами.</p>
+                    <button class="investments_block-btn btn_empty">Выбрать</button>
+                    <img class="investments_block-image" src="./assets/images/investments/logos.png" loading="lazy" alt="logos">
+                </div>
+                <div class="section_block">
+                    <h4 class="section_block-title">Обучение</h4>
+                    <p class="investments_block-subtitle">Учитесь инвестировать БЕСПЛАТНО вместе с Банкирос</p>
+                    <button class="investments_block-btn btn_empty">Пройти обучение</button>
+                </div>
+            </div>
+        </section>
+        <div class="section_container">
+            <section class="stock">
+                <div class="section_block">
+                    <div class="stock_top">
+                        <h3 class="section_block-title">Акции</h3>
+                        <div class="stock_select" data-state="">
+                            <div class="stock_select-title">1 День</div>
+                            <div class="stock_select-content">
+                                <input id="select1" class="stock_select-input" type="radio" name="day1">
+                                <label for="select1" class="stock_select-label">1 День</label>
+                                <input id="select2" class="stock_select-input" type="radio" name="day2">
+                                <label for="select2" class="stock_select-label">2 День</label>
+                                <input id="select3" class="stock_select-input" type="radio" name="day3">
+                                <label for="select3" class="stock_select-label">3 День</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="stock_tab">
+                        <p class="stock_tab-title stock_tab-active" data-value="1">лидеры роста</p>
+                        <p class="stock_tab-title" data-value="2">tab inactive</p>
+                    </div>
+                    <div class="stock_tab-line"></div>
+                    <div class="stock_content">
+                        <div class="stock_content-tab stock_content-limited tab-1 active">
+                            <div class="stock_table">
+                                <div class="stock_block">
+                                    <div>
+                                        <p class="stock_table-title">Тикер</p>
+                                    </div>
+                                    <div>
+                                        <span class="stock_table-title">Посл. цена</span>
+                                        <span class="stock_table-title">Изм.</span>
+                                    </div>
+                                </div>
+                                <div class="section_block-line"></div>
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/vtb.png" alt="vtb">
+                                        <div class="stock_block-desc">
+                                            <p class="stock_block-title">ВТБ банк</p>
+                                            <p class="stock_block-subtitle">VTBR</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">4.790 ₽</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-up.svg" alt="arrow-up">
+                                            <span class="stock_block-change">8.27%</span>
+                                            <p class="stock_block-change">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stock_table">
+                                <div class="section_block-line"></div>
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/no-logo.png" alt="HYDR">
+                                        <div class="stock_block-desc">
+                                            <p class="stock_block-title stock_block-exclusion">ПАО "Русгидро"</p>
+                                            <p class="stock_block-subtitle">HYDR</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">0.0132 ₽</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-down.svg" alt="arrow-down">
+                                            <span class="stock_block-change change_color">4.83%</span>
+                                            <p class="stock_block-change change_color">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stock_table">
+                                <div class="section_block-line"></div>
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/disney.png" alt="disney">
+                                        <div class="stock_block-desc">
+                                            <div class="disney">
+                                                <p class="stock_block-title">The Walt</p>
+                                                <p class="stock_block-title disney_dots">Disney Company</p>
+                                            </div>
+                                            <p class="stock_block-subtitle">DIS-RM</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">10 900 $</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-up.svg" alt="arrow-up">
+                                            <span class="stock_block-change">4.34%</span>
+                                            <p class="stock_block-change">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stock_table">
+                                <div class="section_block-line"></div>
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/gazp.png" alt="gazprom">
+                                        <div class="stock_block-desc">
+                                            <p class="stock_block-title">Газпром</p>
+                                            <p class="stock_block-subtitle">GAZP</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">25.70 ₽</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-up.svg" alt="arrow-up">
+                                            <span class="stock_block-change">4.34%</span>
+                                            <p class="stock_block-change">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stock_table">
+                                <div class="section_block-line"></div>
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/disney.png" alt="disney">
+                                        <div class="stock_block-desc">
+                                            <div class="disney">
+                                                <p class="stock_block-title">The Walt</p>
+                                                <p class="stock_block-title disney_dots">Disney Company</p>
+                                            </div>
+                                            <p class="stock_block-subtitle">DIS-RM</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">10 900 $</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-up.svg" alt="arrow-up">
+                                            <span class="stock_block-change">4.34%</span>
+                                            <p class="stock_block-change">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stock_table">
+                                <div class="section_block-line"></div>
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/cisco.png" alt="cisco">
+                                        <div class="stock_block-desc">
+                                            <p class="stock_block-title stock_block-exclusion">Cisco Systems, Inc.</p>
+                                            <p class="stock_block-subtitle">CSCO-RM</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">25.70 ₽</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-up.svg" alt="arrow-up">
+                                            <span class="stock_block-change">4.34%</span>
+                                            <p class="stock_block-change">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section_block-line"></div>
+                            </div>
+
+                            <div class="stock_table">
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/vtb.png" alt="vtb">
+                                        <div class="stock_block-desc">
+                                            <p class="stock_block-title">ВТБ банк</p>
+                                            <p class="stock_block-subtitle">VTBR</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">4.790 ₽</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-up.svg" alt="arrow-up">
+                                            <span class="stock_block-change">8.27%</span>
+                                            <p class="stock_block-change">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stock_table">
+                                <div class="section_block-line"></div>
+                                <div class="stock_block">
+                                    <div class="stock_block-left">
+                                        <img loading="lazy" src="./assets/images/stock/no-logo.png" alt="HYDR">
+                                        <div class="stock_block-desc">
+                                            <p class="stock_block-title stock_block-exclusion">ПАО "Русгидро"</p>
+                                            <p class="stock_block-subtitle">HYDR</p>
+                                        </div>
+                                    </div>
+                                    <div class="stock_block-right">
+                                        <div class="stock_block-last">
+                                            <p class="stock_block-price">0.0132 ₽</p>
+                                        </div>
+                                        <div>
+                                            <img loading="lazy" src="./assets/images/stock/arrow-down.svg" alt="arrow-down">
+                                            <span class="stock_block-change change_color">4.83%</span>
+                                            <p class="stock_block-change change_color">0.36 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stock_content-tab tab-2">
+                            <p class="stock_block-without">InActive</p>
+                        </div>
+                    </div>
+                    <div class="stock_bottom">
+                        <p class="stock_tab-title stock_tab-time">Обновлено в 12:30</p>
+                        <a href="#" class="stock_bottom-full">Больше лидеров роста ></a>
+                    </div>
+                </div>
+            </section>
+            <section class="calendar">
+                <div class="section_block">
+                    <h3 class="section_block-title">Экономический календарь</h3>
+                    <div class="calendar_content">
+                        <span class="calendar_date">Ноябрь 17</span>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">13:00</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/russia.svg" alt="Russia">
+                            <div class="item_dot item_dot-red"></div>
+                            <p class="item_desc">Индекс цен на продовольствие</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">13:00</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/russia.svg" alt="Russia">
+                            <div class="item_dot item_dot-red"></div>
+                            <p class="item_desc">Индекс цен на продовольствие</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">13:00</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/russia.svg" alt="Russia">
+                            <div class="item_dot item_dot-red"></div>
+                            <p class="item_desc">Employment Overall Flash</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">16:45</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/usa.svg" alt="USA">
+                            <div class="item_dot item_dot-orange"></div>
+                            <p class="item_desc">Изменение занятости (кв/кв)</p>
+                        </div>
+                        <p class="calendar_date data_another">Ноябрь 18</p>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">16:45</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/usa.svg" alt="USA">
+                            <div class="item_dot item_dot-orange"></div>
+                            <p class="item_desc">ИПЦ Франции</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">16:45</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/russia.svg" alt="Russia">
+                            <div class="item_dot item_dot-red"></div>
+                            <p class="item_desc">PPI exFood/Energy MM</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">16:45</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/russia.svg" alt="Russia">
+                            <div class="item_dot item_dot-green"></div>
+                            <p class="item_desc">Речь члена FOMC Уильямса </p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">16:45</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/usa.svg" alt="USA">
+                            <div class="item_dot item_dot-orange"></div>
+                            <p class="item_desc">Базовый индекс цен производителей (PPI) (г/г) (окт)	</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">16:45</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/russia.svg" alt="Russia">
+                            <div class="item_dot item_dot-red"></div>
+                            <p class="item_desc">Индекс PCSI Thomson Reuters/Ipsos</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                        <div class="calendar_item">
+                            <div class="item_back">
+                                <p class="item_back-time">16:45</p>
+                            </div>
+                            <img loading="lazy" class="item_image" src="./assets/images/calendar/russia.svg" alt="Russia">
+                            <div class="item_dot item_dot-green"></div>
+                            <p class="item_desc">EIA-Nat Gas Chg Bcf</p>
+                        </div>
+                        <div class="section_block-line"></div>
+                    </div>
+                    <a href="#" class="calendar_content-full">Больше событий ></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
